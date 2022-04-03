@@ -85,7 +85,10 @@ const turnoComputadora = ( puntosMinimos ) => {
             
         } else if ( puntosComputadora === puntosMinimos ) {
             alert("Empate, ni pa ti ni pa mi")
+            
         } else if ( puntosMinimos > 21) {
+            alert("Cagaste :(")
+        } else if ( puntosComputadora < 21 && puntosComputadora > puntosMinimos) {
             alert("Cagaste :(")
         }
 }, 10)
