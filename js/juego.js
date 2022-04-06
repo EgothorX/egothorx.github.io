@@ -91,7 +91,7 @@ const turnoComputadora = ( puntosMinimos ) => {
         } else if ( puntosComputadora < 21 && puntosComputadora > puntosMinimos) {
             alert("Cagaste :(")
         }
-}, 85)
+}, 600)
 }
 
 
