@@ -10,7 +10,6 @@
     <link rel="stylesheet" href="css/bootstrap-grid.min.css" type="text/css">
     <link rel="stylesheet" href="css/main.css" type="text/css">
     <link rel="stylesheet" href="css/cartas.css">
-    <link rel="stylesheet" href="css/animations.css">
   </head>
 
   <body>
@@ -97,12 +96,14 @@
                     <div class="row">
                       <div class="col-sm-12 col-md-12 col-lg-12">
                         <div class="title-block">
-                          <h2>Soy EgothorX</h2>
+                          <h2>EgothorX</h2>
                           <div>                                    
                             <div class="item">
-                              <div class="typing-text"></div>
+                              <div class="sp-subtitle">FullStack Developer</div>
                             </div>
-                           
+                            
+                            <div class="item">
+                              <div class="sp-subtitle">Programador de aplicaciones multiplataforma</div>
                             </div>
                           </div>
                         </div>
@@ -111,28 +112,44 @@
 
                 </div>
               </div>
-   
+
+              <div data-id="resume" class="animated-section">
+                <div class="section-content">  
+                  <div class="page-title">
+                    <h2>BlackJack</h2>
+                  </div>
+                  <div class="row mt-2">
+                    <div class="col text-center">
+                        <button id="btnNuevo" class="btn btn-danger">Nuevo Juego</button>
+                        <button id="btnPedir" class="btn btn-primary">Pedir Carta</button>
+                        <button id="btnDetener" class="btn btn-primary">Plantarse</button>
+                    </div>
+                </div>
+                
+                <div class="row container">
+                    <div class="col">
+                        
+                        <h1>Jugador  - <small>0</small></h1>
+                        <div id="jugador-cartas">
+                            
+                           
+                        </div>
+                    </div>
+                </div>
+                <div class="row container mt-2">
+                    <div class="col">
+                        
+                        <h1>Ordenador  - <small>0</small></h1>
+                        <div id="computadora-cartas">
+                           
+            
+                        </div>
+                    </div>
+                </div>
 
                 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.11/typed.min.js"></script>
-
-    <script>
-    
-        var type = new Typed('.typing-text',{
-            strings : [ 'Fullstack developer', 'Desarrollador web', 'Programador multiplataforma', 'Movil developer' ],
-            typeSpeed: 120,
-            loop:true
-        });
-    
-        let themeColor = document.querySelectorAll('.theme-toggler span');
-        themeColor.forEach(color => color.addEventListener('click', () =>{
-            let background = color.style.background;
-            document.querySelector('body').style.background = background;
-        }));
-    
-    </script>
-                
+    <script src="js/underscore-min.js"></script>
+    <script src="js/juego.js"></script>
     <script src="js/main.js"></script>
-
   </body>
 </html>
