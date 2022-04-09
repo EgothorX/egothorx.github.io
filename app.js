@@ -1,28 +1,29 @@
-const daysEl = document.getElementById('days')
-const hoursEl = document.getElementById('hours')
-const minsEl = document.getElementById('mins')
-const secondsEl = document.getElementById('seconds')
-
-const aniversario = new Date("1 May 2022")
+const textoTiempo = document.querySelector('.tiempo')
 
 
-function countdown() {
-    const fechaAniversario = new Date(aniversario)
-    const currentDate = new Date()
+const segundo = 1000
+const minuto = segundo * 60
+const hora = minuto * 60
+const dia = hora * 24
+
+const aniversario = new Date('1 May 2022')
+
+
+const countDown = () => {
+    const hoy = new Date()
+    const tiempoRestante = aniversario - hoy
     
-    const totalSeconds = (fechaAniversario - currentDate) / 1000
     
-    const days = Math.floor(totalSeconds / 3600 / 24)
-    const hours = Math.floor (totalSeconds / 3600) % 24
-    const minutes = Math.floor(totalSeconds / 60) % 60
-    const seconds = Math.floor(totalSeconds) % 60
     
-    daysEl.innerHTML = days
-    hoursEl.innerHTML = hours
-    minsEl.innerHTML = minutes
-    secondsEl.innerHTML = seconds
+    const dias = Math.floor(tiempoRestante / dia)
+    const horas = Math.floor((tiempoRestante % dia) / hora)
+    const minutos = Math.floor((tiempoRestante % hora) / minuto)
+    const segundos = Math.floor((tiempoRestante % minuto) / segundo)
+    
+    
+    textoTiempo.innerHTML = dias + ' días ' + horas + ' horas ' + minutos + ' minutos ' + segundos + ' segundos'
+    
     
 }
 
-countdown()
-setInterval(countdown, 1000)
+setInterval(countDown, segundo)
