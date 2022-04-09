@@ -1,138 +1,35 @@
 <!DOCTYPE html>
-<html lang="en" class="no-js">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge"> 
-    <title>EgothorX Portfolio</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
-    <link rel="shortcut icon" href="favicon.ico">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-    <link rel="stylesheet" href="css/bootstrap-grid.min.css" type="text/css">
-    <link rel="stylesheet" href="css/main.css" type="text/css">
-    <link rel="stylesheet" href="css/cartas.css">
-    <link rel="stylesheet" href="css/animations.css">
-  </head>
-
-  <body>
-    <!-- Animated Background -->
-    <div class="lm-animated-bg" style="background-image: url(img/main_bg.png);"></div>
-    <!-- /Animated Background -->
-
-    <!-- Loading animation -->
-    <div class="preloader">
-      <div class="preloader-animation">
-        <div class="preloader-spinner">
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cuenta atrás</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Nuestro 3º aniversario</h1>
+    
+    <div class="countdown-container">
+        <div class="countdown-el days-c">
+            <p class="big-text" id="days"></p>
+            <span>días</span>
         </div>
-      </div>
+        <div class="countdown-el hours-c">
+            <p class="big-text" id="hours"></p>
+            <span>horas</span>
+        </div>
+        <div class="countdown-el mins-c">
+            <p class="big-text" id="mins"></p>
+            <span>minutos</span>
+        </div>
+        <div class="countdown-el seconds-c">
+            <p class="big-text" id="seconds"></p>
+            <span>segundos</span>
+        </div>
     </div>
-    <!-- /Loading animation -->
-
-    <div class="page">
-      <div class="page-content">
-
-          <header id="site_header" class="header mobile-menu-hide">
-            <div class="header-content">
-              <div class="header-photo">
-                <img src="img/main_photo.jpg" alt="EgothorX">
-              </div>
-              <div class="header-titles">
-                <h2>EgothorX</h2>
-                <h4>Fullstack Developer</h4>
-              </div>
-            </div>
-
-            <ul class="main-menu">
-              <li class="active">
-                <a href="index.html">
-                  <span class="menu-icon lnr lnr-home"></span>
-                  <span class="link-text">Inicio</span>
-                </a>
-              </li>
-              <li>
-                <a href="blackjack.html">
-                  <span class="menu-icon lnr lnr-smile"></span>
-                  <span class="link-text">BlackJack</span>
-                </a>
-              </li>
-              <li>
-                <a href="#">
-                  <span class="menu-icon lnr lnr-mustache"></span>
-                  <span class="link-text">Wordle</span>
-                </a>
-              </li>
-              
-            </ul>
-
-            <div class="social-links">
-              <ul>
-                <li><a href="#" target="_blank"><i class="fab fa-linkedin-in"></i></a></li>
-                <li><a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
-                <li><a href="#" target="_blank"><i class="fab fa-twitter"></i></a></li>
-              </ul>
-            </div>
-
-            <div class="header-buttons">
-              <a href="#" target="_blank" class="btn btn-primary">Contrátame</a>
-            </div>
-
-            <div class="copyrights">© 2022 All rights reserved.</div>
-          </header>
-
-          <!-- Mobile Navigation -->
-          <div class="menu-toggle">
-            <span></span>
-            <span></span>
-            <span></span>
-          </div>
-          <!-- End Mobile Navigation -->
-
-
-
-          <div class="content-area">
-            <div>
-             
-              <div class="animated-section start-page">
-                <div class="section-content vcentered">
-
-                    <div class="row">
-                      <div class="col-sm-12 col-md-12 col-lg-12">
-                        <div class="title-block">
-                          <h2>Soy EgothorX</h2>
-                          <div>                                    
-                            <div class="item">
-                              <div class="typing-text"></div>
-                            </div>
-                           
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-
-                </div>
-              </div>
-   
-
-                
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.11/typed.min.js"></script>
-
-    <script>
     
-        var type = new Typed('.typing-text',{
-            strings : [ 'Fullstack developer', 'Desarrollador web', 'Programador multiplataforma', 'Movil developer' ],
-            typeSpeed: 120,
-            loop:true
-        });
     
-        let themeColor = document.querySelectorAll('.theme-toggler span');
-        themeColor.forEach(color => color.addEventListener('click', () =>{
-            let background = color.style.background;
-            document.querySelector('body').style.background = background;
-        }));
-    
-    </script>
-                
-    <script src="js/main.js"></script>
-
-  </body>
+<script src="app.js"></script>
+</body>
 </html>
